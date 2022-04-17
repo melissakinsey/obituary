@@ -18,17 +18,20 @@ let memory = {
     form_of_name: [
         () => 'select form of name',
         () => `${inputs.firstLastName}`,
-        () => `Mr. ${inputs.firstLastName}`,
+        () => `${inputs.gender=="male"?"Mr.":"Mrs."} ${inputs.firstLastName}`,
         () => `${inputs.firstLastName}'s`,
     ],
     cause_of_death: [
         () => 'select cause of death',
         () => 'after a long illness',
+        () => 'after a brief illness',
+        () => 'unexpectedly',
+        () => `lost ${inputs.gender} battle with cancer`
 
     ],
     first_sentence: [
         () => `select first sentence`,
-        () => `, loving ${inputs.roles}.`,
+        () => `, loving ${inputs.roles.join(", ")},`,
     ],
     death: [
         `<form>
