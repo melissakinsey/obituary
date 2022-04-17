@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../ask-cli"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "obituary",
+		"liveServer.settings.port": 5501
+	}
+}

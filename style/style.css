@@ -1,0 +1,129 @@
+body{
+    font-family: "Josefin-sans";
+    background-image: url("single-dandelion.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: "Josefin sans";
+    color: #87c034;
+    size: 72px;
+    text-align-last: center;
+    margin-top: 4rem;
+    margin-right: 1em;
+}
+legend {
+    appearance: none;
+    background-color: #87c034;
+    opacity: none;
+    font-family: "Josefin sans";
+    font-size: 1.75em;
+    text-align: center;
+    color: white;
+    padding: .5em;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+    margin-left: -1em;
+    margin-right: auto;
+    border-radius: .75em;
+    width: auto;
+}
+label {
+    font-size: 24px;
+}
+
+:-ms-input-placeholder {
+    background-color: #cdc8b0;
+}
+
+::-webkit-input-placeholder {
+    background-color: #cdc8b0;
+}
+
+fieldset {
+    align-items: baseline;
+    background-color: white;
+    opacity: 100;
+    border: none;
+    padding: 2em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 1.25em;
+    width: 40%;
+    font-family: "Josefin sans";
+}
+.grid{
+    display: grid;
+    align-items: baseline;
+    background-color: white;
+    opacity: .85;
+    grid-template-columns: 170px 170px 170px;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+input {
+    margin: .5em .5em 1em 1em;
+    padding: 1em;
+    background-color: #cdc8b0;
+    color: black; 
+    font-size: 1em;
+    border: none;
+    border-radius: 1.25em;
+    font-family: "Josefin sans";
+}
+.output {
+font-family: "Josefin sans";
+}
+container{
+    align-items: baseline;
+    border: none black;
+    padding: 2em;
+    margin: 1em;
+    background-color: white ;
+    border: none;
+}
+div.label {
+    font-family: "Josefin sans";
+    color: black;
+    font-size: 1.25em;
+}
+.error{
+    font-style: italic;
+    color:red;
+}
+
+                .intLink {
+                    cursor: pointer;
+                }
+
+                img.intLink {
+                    border: 0;
+                }
+
+                #toolBar1 select {
+                    font-size: 10px;
+                }
+
+                #textBox {
+                    width: 540px;
+                    height: 200px;
+                    border: 1px #000000 solid;
+                    padding: 12px;
+                    overflow: scroll;
+                }
+
+                #textBox #sourceText {
+                    padding: 0;
+                    margin: 0;
+                    min-width: 498px;
+                    min-height: 200px;
+                }
+
+                #editMode label {
+                    cursor: pointer;
+                }

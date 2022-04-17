@@ -1,0 +1,73 @@
+body{
+    align-items: space-around;
+    font-family: "Josefin-sans";
+    background-image: url("pink-abstract.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+legend {
+    appearance: none;
+    background-color: black;
+    opacity: none;
+    font-family: "Josefin sans";
+    font-size: 1.75em;
+    text-align: center;
+    color: white;
+    padding: .5em;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+    margin-left: -1em;
+    margin-right: auto;
+    border-radius: .75em;
+    width: auto;
+}
+fieldset {
+    background-color: white;
+    opacity: .85;
+    border: none;
+    padding: 2em;
+    margin-bottom: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1.25em;
+    width: 60%;
+    font-family: "Josefin sans";
+}
+.grid{
+    display: grid;
+    background-color: white;
+    opacity: .85;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 1em;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+div.grid {
+    grid-template-rows: 1em;
+}
+input {
+    margin: .5em .5em 1em 1em;
+    padding: 1em;
+    background-color: #e3d8d8;
+    color: black; 
+    border: none;
+    border-radius: 1.25em;
+    font-family: "Josefin sans";
+}
+.output {
+font-family: "Josefin sans";
+}
+container{
+    align-items: center;
+    border: none black;
+    padding: 2em;
+    margin: 1em;
+    background-color: white ;
+    border: none;
+}
+div.label {
+    font-family: "Josefin sans";
+    color: black;
+    font-size: 1.25em;
+}

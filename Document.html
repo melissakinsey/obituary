@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5501/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer="" src="./Document_files/index.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="./Document_files/style.css"></head>
+<body> 
+    <div>
+    <fieldset>
+        <legend>general</legend>
+        <input type="radio" name="gender" value="male">
+        <label>male</label>
+        <input type="radio" name="gender" value="female">
+        <label>female</label>
+        <br>
+        <label>First and last name:</label>
+        <input type="text" name="firstLastName" placeholder="Jane Doe">
+        <br>
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="70">
+        <br> 
+        <label>Date of death:</label>
+        <input type="date" name="DOD">
+    </fieldset>
+</div>  
+
+    <fieldset id="caring" style="display: none">
+        <legend>caring</legend>
+    </fieldset>
+
+    <fieldset id="roles" style="display: none">
+        <legend>roles</legend>
+    </fieldset>
+
+    <fieldset id="hobbies">
+        <div class="grid"><div><input type="checkbox" value="antiquing" name="hobbies"><label>antiquing</label></div><div><input type="checkbox" value="astronomy" name="hobbies"><label>astronomy</label></div><div><input type="checkbox" value="baking" name="hobbies"><label>baking</label></div><div><input type="checkbox" value="beekeeping" name="hobbies"><label>beekeeping</label></div><div><input type="checkbox" value="birdwatching" name="hobbies"><label>birdwatching</label></div><div><input type="checkbox" value="blogging" name="hobbies"><label>blogging</label></div><div><input type="checkbox" value="camping" name="hobbies"><label>camping</label></div><div><input type="checkbox" value="collecting stamps" name="hobbies"><label>collecting stamps</label></div><div><input type="checkbox" value="cooking" name="hobbies"><label>cooking</label></div><div><input type="checkbox" value="cross-stitching" name="hobbies"><label>cross-stitching</label></div><div><input type="checkbox" value="dancing" name="hobbies"><label>dancing</label></div><div><input type="checkbox" value="dining out" name="hobbies"><label>dining out</label></div><div><input type="checkbox" value="entertaining" name="hobbies"><label>entertaining</label></div><div><input type="checkbox" value="gardening" name="hobbies"><label>gardening</label></div><div><input type="checkbox" value="genealogy" name="hobbies"><label>genealogy</label></div><div><input type="checkbox" value="hiking" name="hobbies"><label>hiking</label></div><div><input type="checkbox" value="horseback riding" name="hobbies"><label>horseback riding</label></div><div><input type="checkbox" value="decorating" name="hobbies"><label>decorating</label></div><div><input type="checkbox" value="investing" name="hobbies"><label>investing</label></div><div><input type="checkbox" value="jewelry making" name="hobbies"><label>jewelry making</label></div><div><input type="checkbox" value="knitting" name="hobbies"><label>knitting</label></div><div><input type="checkbox" value="meditation" name="hobbies"><label>meditation</label></div><div><input type="checkbox" value="painting" name="hobbies"><label>painting</label></div><div><input type="checkbox" value="photography" name="hobbies"><label>photography</label></div><div><input type="checkbox" value="pottery" name="hobbies"><label>pottery</label></div><div><input type="checkbox" value="rapping" name="hobbies"><label>rapping</label></div><div><input type="checkbox" value="reading" name="hobbies"><label>reading</label></div><div><input type="checkbox" value="scrapbooking" name="hobbies"><label>scrapbooking</label></div><div><input type="checkbox" value="singing" name="hobbies"><label>singing</label></div><div><input type="checkbox" value="spelunking" name="hobbies"><label>spelunking</label></div><div><input type="checkbox" value="storytelling" name="hobbies"><label>storytelling</label></div><div><input type="checkbox" value="joke telling" name="hobbies"><label>joke telling</label></div><div><input type="checkbox" value="woodworking" name="hobbies"><label>woodworking</label></div><div><input type="checkbox" value="quilting" name="hobbies"><label>quilting</label></div></div>
+        <legend>hobbies</legend>
+    </fieldset>
+
+    <div class="container">
+        <select id="first_sentence" name="first_sentence"></select>
+        <select id="died" name="died">
+        </select>
+        <select id="age" min="1" max="115" name="age">
+        </select>
+She was a caring wife, mother, grandmother, sister, and friend. Her pleasant personality was contagious to everyone she met.
+    </div>
+    
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
