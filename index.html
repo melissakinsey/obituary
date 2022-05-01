@@ -129,22 +129,22 @@
                         <img class="intLink" title="Paste" onclick="formatDoc('paste');"
                             src="data:image/gif;base64,R0lGODlhFgAWAIQUAD04KTRLY2tXQF9vj414WZWIbXmOrpqbmpGjudClFaezxsa0cb/I1+3YitHa7PrkIPHvbuPs+/fvrvv8/f///////////////////////////////////////////////yH5BAEAAB8ALAAAAAAWABYAAAWN4CeOZGmeaKqubGsusPvBSyFJjVDs6nJLB0khR4AkBCmfsCGBQAoCwjF5gwquVykSFbwZE+AwIBV0GhFog2EwIDchjwRiQo9E2Fx4XD5R+B0DDAEnBXBhBhN2DgwDAQFjJYVhCQYRfgoIDGiQJAWTCQMRiwwMfgicnVcAAAMOaK+bLAOrtLUyt7i5uiUhADs=" />
                     </div>
-                    <!--- This _contenteditable_ element adds a text box whose contents can be edited by the user. Essentially it makes otherwise static HTML dynamic.--->
-                    <div id="textBox" contenteditable="true" class='container'>
-                      
-                            <select name="form_of_name">
 
-                            </select><select id="first_sentence" name="first_sentence">
-                                
+                    <!--- This _contenteditable_ element adds a text box whose contents can be edited by the user. Essentially it makes otherwise static HTML dynamic.--->
+                    
+                    <div id="textBox" contenteditable="true" class='container'>
+                            <select name="form_of_name">
                             </select>
-            
-                            
-                            <select name="cause_of_death"></select>
-                            <select id="age" min="1" max="115" name="age"></select>
-                      
+                            <div id="first_sentence" name="first_sentence">
+                            </div>
+                            <select name="cause_of_death">
+                            </select>
+                            <select id="age" min="1" max="115" name="age">
+                            </select>
+                            <div id="hobbies_template">
+                            </div>
                             <!--The span element contains placeholder text-->
                             <span contenteditable="true">Edit your content in this window.</span>
-                   
                     </div>                
         </fieldset>
     </body>

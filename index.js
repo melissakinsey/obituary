@@ -23,15 +23,16 @@ let memory = {
     ],
     cause_of_death: [
         () => 'select cause of death',
-        () => 'after a long illness',
-        () => 'after a brief illness',
-        () => 'unexpectedly',
+        () => 'died after a long illness',
+        () => 'died after a brief illness',
+        () => 'died unexpectedly',
         () => `lost ${inputs.gender} battle with cancer`
 
     ],
     first_sentence: [
         () => `select first sentence`,
         () => `, loving ${inputs.roles.join(", ")},`,
+
     ],
     death: [
         `<form>
@@ -45,9 +46,7 @@ let memory = {
     ],
     age: [
         () => 'select day of death',
-        (age) => `on July 6, 2020, died at age ${age}`,
-        (age) => `on July 6, 2020 at the age of ${age}`,
-        (age) => `passed away at the age of ${age} on July 6, 2020`,
+        (age) => `at age ${age}.`
     ],
     /*Caring and roles: Need to make them visible. That will fix spacing problem in Hobbies table.*/
     roles: {
@@ -102,6 +101,12 @@ let template = ``;
 function generateObituary(name, value)
 {
     //debugger
+    function resetDiv(select,key)
+    {
+        select.innerHTML = memory[key][1](
+
+        ) 
+    }
     function resetSelected(select, selector,key)
     {
         if (!select)
@@ -118,7 +123,6 @@ function generateObituary(name, value)
             {
                 return
             }
-            
         } 
         select.innerHTML = ''
         memory[key].forEach((example) =>
@@ -131,18 +135,18 @@ function generateObituary(name, value)
     let select = document.querySelector(`select[name='${name}']`);
     resetSelected(select, `[name='${name}']`,name);
 
-
-    let first_sentence_select = document.querySelector(`select#first_sentence`);
-     resetSelected(first_sentence_select, '#first_sentence','first_sentence')
+    let first_sentence_div = document.querySelector(`div#first_sentence`);
+     resetDiv(first_sentence_div,'first_sentence')
    
     let form_of_name = document.querySelector(`select[name="form_of_name"]`);
     resetSelected(form_of_name, `[name="form_of_name"]`, 'form_of_name');
     
     let cause_of_death = document.querySelector(`select[name="cause_of_death"]`);
     resetSelected(cause_of_death, `[name="cause_of_death"]`,'cause_of_death');
-
-
     addSelectGenerator()
+
+    let hobbies_template = document.querySelector(`#hobbies_template`);
+    hobbies_template.innerHTML = inputs.hobbies.join(", ")
 }
 
 document.querySelectorAll("input").forEach((input) =>
@@ -165,8 +169,6 @@ document.querySelectorAll("input").forEach((input) =>
             // {
             //     document.querySelector(`#${name}`).innerText = new Date(value).toLocaleDateString()
             // }
-
-
         }
         console.log({ inputs, name, value })
 
@@ -194,7 +196,6 @@ document.querySelectorAll("input").forEach((input) =>
 
         generateObituary(name, value)
         //todo understand why it switch all not specific one
-
     }
     input.addEventListener('change', eventHandler);
     input.addEventListener('input', eventHandler);
@@ -214,7 +215,6 @@ function generateInput(props)
     {
         //action to replace
     }
-
 }
 function addSelectGenerator()
 {
