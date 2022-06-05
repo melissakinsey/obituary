@@ -31,7 +31,7 @@ let memory = {
     ],
     first_sentence: [
         () => `select first sentence`,
-        () => `, loving ${inputs.roles.join(", ")},`,
+        () => `, loving ${inputs.roles && inputs.roles.join(", ")},`,
 
     ],
     death: [
@@ -80,6 +80,7 @@ memory.hobbies.forEach(hobby =>
 )
 function checkedHandler(e)
 {
+//    debugger
     let { value, name, checked } = e.target
     if (!(name in inputs))
     {
@@ -135,18 +136,30 @@ function generateObituary(name, value)
     let select = document.querySelector(`select[name='${name}']`);
     resetSelected(select, `[name='${name}']`,name);
 
-    let first_sentence_div = document.querySelector(`div#first_sentence`);
-     resetDiv(first_sentence_div,'first_sentence')
-   
-    let form_of_name = document.querySelector(`select[name="form_of_name"]`);
-    resetSelected(form_of_name, `[name="form_of_name"]`, 'form_of_name');
-    
-    let cause_of_death = document.querySelector(`select[name="cause_of_death"]`);
-    resetSelected(cause_of_death, `[name="cause_of_death"]`,'cause_of_death');
+    if (name === 'roles')
+    {
+        let first_sentence_div = document.querySelector(`div#first_sentence`);
+        resetDiv(first_sentence_div, 'first_sentence')
+    }
+
+    if (name == 'gender' || name == 'firstLastName')
+    {
+        let form_of_name = document.querySelector(`select[name="form_of_name"]`);
+        resetSelected(form_of_name, `[name="form_of_name"]`, 'form_of_name');
+    }
+    if (name === 'gender')
+    {
+        let cause_of_death = document.querySelector(`select[name="cause_of_death"]`);
+        resetSelected(cause_of_death, `[name="cause_of_death"]`, 'cause_of_death');
+    }
     addSelectGenerator()
 
-    let hobbies_template = document.querySelector(`#hobbies_template`);
-    hobbies_template.innerHTML = inputs.hobbies.join(", ")
+    if (name == 'hobbies' || name == 'gender')
+    {
+        let hobbies_template = document.querySelector(`#hobbies_template`);
+        hobbies_template.innerHTML = (inputs.gender == "male" ? "He" : "She") + " enjoyed " + listSeparator(inputs.hobbies) + '.';
+        console.log(inputs)
+    }
 }
 
 document.querySelectorAll("input").forEach((input) =>
@@ -194,6 +207,14 @@ document.querySelectorAll("input").forEach((input) =>
 
         }
 
+        if (name === 'age' && + value < 0)
+        {
+            input.value
+                
+                = 0
+            alert('Invalid! Age must be > 0.')  
+        }
+
         generateObituary(name, value)
         //todo understand why it switch all not specific one
     }
@@ -238,4 +259,12 @@ addSelectGenerator()
 if (typeof window !== "undefined")
 {
     // browser code
+}
+
+function listSeparator(array)
+{
+    let copy = [...array]
+   //console.log(array)
+    let last = copy.pop()
+    return copy.join(', ') + (copy.length>1?',':'') + (copy.length?' and ':' ') + last
 }
