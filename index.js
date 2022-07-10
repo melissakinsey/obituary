@@ -18,7 +18,7 @@ let memory = {
     form_of_name: [
         () => 'select form of name',
         () => `${inputs.firstLastName}`,
-        () => `${inputs.gender=="male"?"Mr.":"Mrs."} ${inputs.firstLastName}`,
+        () => `${inputs.gender == "male" ? "Mr." : "Mrs."} ${inputs.firstLastName}`,
         () => `${inputs.firstLastName}'s`,
     ],
     cause_of_death: [
@@ -80,7 +80,7 @@ memory.hobbies.forEach(hobby =>
 )
 function checkedHandler(e)
 {
-//    debugger
+    //    debugger
     let { value, name, checked } = e.target
     if (!(name in inputs))
     {
@@ -102,13 +102,13 @@ let template = ``;
 function generateObituary(name, value)
 {
     //debugger
-    function resetDiv(select,key)
+    function resetDiv(select, key)
     {
         select.innerHTML = memory[key][1](
 
-        ) 
+        )
     }
-    function resetSelected(select, selector,key)
+    function resetSelected(select, selector, key)
     {
         if (!select)
         {
@@ -124,17 +124,20 @@ function generateObituary(name, value)
             {
                 return
             }
-        } 
+        }
+       // debugger
+        select.classList.remove("d-none")
         select.innerHTML = ''
         memory[key].forEach((example) =>
-            {
-                let option = document.createElement("option");
-                option.innerText = example(value);
-                select.appendChild(option);
-            });
+        {
+            let option = document.createElement("option");
+            option.innerText = example(value);
+            select.appendChild(option);
+        });
     }
     let select = document.querySelector(`select[name='${name}']`);
-    resetSelected(select, `[name='${name}']`,name);
+
+    resetSelected(select, `[name='${name}']`, name);
 
     if (name === 'roles')
     {
@@ -154,7 +157,7 @@ function generateObituary(name, value)
     }
     addSelectGenerator()
 
-    if (name == 'hobbies' || name == 'gender')
+    if (name == 'hobbies' || name == 'gender' && inputs.hobbies)
     {
         let hobbies_template = document.querySelector(`#hobbies_template`);
         hobbies_template.innerHTML = (inputs.gender == "male" ? "He" : "She") + " enjoyed " + listSeparator(inputs.hobbies) + '.';
@@ -162,15 +165,15 @@ function generateObituary(name, value)
     }
 }
 
-document.querySelectorAll("input").forEach((input) =>
+document.querySelectorAll("input:not([type='checkbox']").forEach((input) =>
 {
     function eventHandler(e)
     {
         let { name, value, type } = e.target;
-        if (type !== 'checkbox')
-        {
+       
             inputs[name] = value;
-        }
+        
+        
         if (name == 'DOD')
         {
             if (new Date(value).getTime() > new Date().getTime())
@@ -209,16 +212,14 @@ document.querySelectorAll("input").forEach((input) =>
 
         if (name === 'age' && + value < 0)
         {
-            input.value
-                
-                = 0
-            alert('Invalid! Age must be > 0.')  
+            input.value = 0
+            alert('Invalid! Age must be > 0.')
         }
 
         generateObituary(name, value)
         //todo understand why it switch all not specific one
     }
-    input.addEventListener('change', eventHandler);
+   // input.addEventListener('change', eventHandler);
     input.addEventListener('input', eventHandler);
 });
 
@@ -264,7 +265,7 @@ if (typeof window !== "undefined")
 function listSeparator(array)
 {
     let copy = [...array]
-   //console.log(array)
+    //console.log(array)
     let last = copy.pop()
-    return copy.join(', ') + (copy.length>1?',':'') + (copy.length?' and ':' ') + last
+    return copy.join(', ') + (copy.length > 1 ? ',' : '') + (copy.length ? ' and ' : ' ') + last
 }

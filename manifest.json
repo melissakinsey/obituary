@@ -1,0 +1,85 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:426053214471:function:HelloWorld"
+        },
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:426053214471:function:HelloWorld"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:426053214471:function:HalloWelt"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "containsAds": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "locales": 
+        "de-DE": {},
+        "en-US": {}
+      },
+      "usesPersonalInfo": false
+    },
+    "publishingInformation": {
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "category": "COMMUNICATION",
+      "distributionCountries": [],
+      "distributionMode": "PUBLIC",
+      "isAvailableWorldwide": true,
+      "locales": {
+        "de-DE": {
+          "description": "\"Hello Deutschland\" ist eine klassische Skill, dass Benutzer mit den text-to-speech (TTS) Möglichkeiten von Alexa bekannt machen. Es ist ein perfekt Weg, für Softwareentwickler ihren ersten Alexa Skill zu probieren.",
+          "examplePhrases": [
+            "Alexa, öffne hallo da draußen deutschland",
+            "Alexa, frage hallo da draußen deutschland zu öffnen",
+            "Alexa, führe hallo da draußen deutschland ein"
+          ],
+          "keywords": [
+            "hallo-welt",
+            "grüße",
+            "grüßeworte",
+            "probe"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/a43f/b6a6bc1eae4b4c179c6952414b3736e3/APP_ICON_LARGE?versionId=65Y8RoX7mGnhxg9IqVfRJ6gqnGkIuJ4l&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220623T013254Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPLOTC37V%2F20220623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c39ac5a09cbfc92594e34bb7271129d9274bbf7b0ad9d3a4206e70c33f7dc70d",
+          "name": "Hello Deutschland",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/d762/fc490dba063b484aa80da620d551926d/APP_ICON?versionId=NEJQEj6o10Ek3gNCNA5t1W72zRcYsult&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220623T013254Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPLOTC37V%2F20220623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=accd8102d372a835cc3e3312eb169b1e63ffadb5ebdfbfdbbe350a24be1439fa",
+          "summary": "\"Hello Deutschland\" ist eine klassische Skill, dass Benutzer mit den text-to-speech (TTS) Möglichkeiten von Alexa bekannt machen."
+        },
+        "en-US": {
+          "description": "\"Hello Deutschland\" is a classic skill that introduces users to Alexa's (TTS) capabilities.",
+          "examplePhrases": [
+            "Alexa, open hello out there",
+            "Alexa, ask hello out there to open",
+            "Alexa, launch hello out there"
+          ],
+          "keywords": [
+            "hello-world",
+            "greetings",
+            "greeting-words",
+            "sample"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/b9ae/0d70c041402e405297bf96a45e16efec/APP_ICON_LARGE?versionId=0FaWILkNhyaIUIFH3T4AAV6_vmaQs897&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220623T013254Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPLOTC37V%2F20220623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b753e592c7c0b703460a3fd8d47df8d8b8082c5409c8efc56fd429eee176d32c",
+          "name": "Hello Deutschland",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/7271/8c88cd5272394c42b1ead9928be05704/APP_ICON?versionId=ew8HDUUF6CLO7q2BDJbrNKAMQL9jg13C&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220623T013254Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPLOTC37V%2F20220623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0ba45a685f7971684d0a09c05b7d5a9199f16052d303553547a12682e5fad7ce",
+          "summary": "\"Hello Deutschland\" is a perfect way for users to try their first Alexa skill.",
+          "updatesDescription": ""
+        }
+      },
+      "testingInstructions": "System Anforderungen: None\nTestanweisungen: To begin, say \"Alexa, öffne hello out there Deutschland.\""
+    }
+  }
+}

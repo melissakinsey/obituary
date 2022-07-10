@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Josefin-sans";
     background-image: url("single-dandelion.png");
     background-position: center;
@@ -6,7 +6,7 @@ body{
     background-size: cover;
 }
 
-h1{
+h1 {
     font-family: "Josefin sans";
     color: #87c034;
     size: 72px;
@@ -14,6 +14,7 @@ h1{
     margin-top: 4rem;
     margin-right: 1em;
 }
+
 legend {
     appearance: none;
     background-color: #87c034;
@@ -30,6 +31,7 @@ legend {
     border-radius: .75em;
     width: auto;
 }
+
 label {
     font-size: 24px;
 }
@@ -55,7 +57,8 @@ fieldset {
     width: 40%;
     font-family: "Josefin sans";
 }
-.grid{
+
+.grid {
     display: grid;
     align-items: baseline;
     background-color: white;
@@ -70,64 +73,71 @@ input {
     margin: .5em .5em 1em 1em;
     padding: 1em;
     background-color: #cdc8b0;
-    color: black; 
+    color: black;
     font-size: 1em;
     border: none;
     border-radius: 1.25em;
     font-family: "Josefin sans";
 }
+
 .output {
-font-family: "Josefin sans";
+    font-family: "Josefin sans";
 }
-container{
+
+container {
     align-items: baseline;
     border: none black;
     padding: 2em;
     margin: 1em;
-    background-color: white ;
+    background-color: white;
     border: none;
 }
+
 div.label {
     font-family: "Josefin sans";
     color: black;
     font-size: 1.25em;
 }
-.error{
+
+.error {
     font-style: italic;
-    color:red;
+    color: red;
 }
 
-                .intLink {
-                    cursor: pointer;
-                }
+.intLink {
+    cursor: pointer;
+}
 
-                img.intLink {
-                    border: 0;
-                }
+img.intLink {
+    border: 0;
+}
 
-                #toolBar1 select {
-                    font-size: 10px;
-                }
+#toolBar1 select {
+    font-size: 10px;
+}
 
-                #textBox {
-                    width: 540px;
-                    height: 200px;
-                    border: 1px #000000 solid;
-                    padding: 12px;
-                    overflow: scroll;
-                }
+#textBox {
+    width: 540px;
+    height: 200px;
+    border: 1px #000000 solid;
+    padding: 12px;
+    overflow: scroll;
+}
 
-                #textBox div {
-                   display: inline; 
-                }
+#textBox div {
+    display: inline;
+}
 
-                #textBox #sourceText {
-                    padding: 0;
-                    margin: 0;
-                    min-width: 498px;
-                    min-height: 200px;
-                }
+#textBox #sourceText {
+    padding: 0;
+    margin: 0;
+    min-width: 498px;
+    min-height: 200px;
+}
 
-                #editMode label {
-                    cursor: pointer;
-                }
+#editMode label {
+    cursor: pointer;
+}
+.d-none {
+    display: none !important; 
+}
