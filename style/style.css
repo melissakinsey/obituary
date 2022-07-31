@@ -1,6 +1,6 @@
 body {
     font-family: "Josefin-sans";
-    background-image: url("single-dandelion.png");
+    background-image: url("single-dandelion-saturated.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,11 +37,11 @@ label {
 }
 
 :-ms-input-placeholder {
-    background-color: #cdc8b0;
+    background-color: #f5e7ad;
 }
 
 ::-webkit-input-placeholder {
-    background-color: #cdc8b0;
+    background-color: #f5e7ad;
 }
 
 fieldset {
@@ -72,7 +72,7 @@ fieldset {
 input {
     margin: .5em .5em 1em 1em;
     padding: 1em;
-    background-color: #cdc8b0;
+    background-color: #f5e7ad;
     color: black;
     font-size: 1em;
     border: none;
@@ -140,4 +140,8 @@ img.intLink {
 }
 .d-none {
     display: none !important; 
+}
+
+.material-symbols-outlined{
+    cursor:pointer
 }
