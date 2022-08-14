@@ -54,7 +54,7 @@ fieldset {
     margin-right: 2em;
     margin-left: 2em;
     border-radius: 1.25em;
-    width: 40%;
+    width: 50%;
     font-family: "Josefin sans";
 }
 
@@ -110,15 +110,18 @@ div.label {
 
 img.intLink {
     border: 0;
+    max-width: 22px;
+    max-height: 22px;
+    padding: 5px;
 }
 
 #toolBar1 select {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 #textBox {
-    width: 540px;
-    height: 200px;
+    max-width: 800px;
+    max-height: 500px;
     border: 1px #000000 solid;
     padding: 12px;
     overflow: scroll;
@@ -143,5 +146,5 @@ img.intLink {
 }
 
 .material-symbols-outlined{
-    cursor:pointer
+    cursor:pointer 
 }

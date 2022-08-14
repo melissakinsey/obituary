@@ -14,15 +14,14 @@ const { prepareDocs } = require("mongodb/lib/operations/common_functions");
                     //event.preventDefault()
                     if (validateMode())
                     {
-                       // oDoc.focus();
+                       oDoc.focus();
                         if (sCmd === 'copy')
                         {
                             //https://stackoverflow.com/questions/6300213/copy-selected-text-to-the-clipboard-without-using-flash-must-be-cross-browser
                             //https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
                             let selection = window.getSelection()
-                                copied = selection.
-                                anchorNode.data.slice(selection.anchorOffset,selection.focusOffset);
-                            console.log(copied);
+                                selection.anchorNode.data.slice(selection.anchorOffset,selection.focusOffset);
+                           // console.log(copied);
                         } else {
                            // debugger
                             let res = document.execCommand(sCmd, false, sValue);
