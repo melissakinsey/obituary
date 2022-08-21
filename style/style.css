@@ -1,5 +1,5 @@
 body {
-    font-family: "Josefin-sans";
+    font-family: "Josefin sans";
     background-image: url("single-dandelion-saturated.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -31,9 +31,17 @@ legend {
     border-radius: .75em;
     width: auto;
 }
-
-label {
+form {
+    display: flex; 
+    flex-direction: row;
+    float: left;
+    width: 100%;
+  }
+  
+  label, input {
+    display: flex; 
     font-size: 24px;
+    float: left;
 }
 
 :-ms-input-placeholder {
@@ -45,7 +53,7 @@ label {
 }
 
 fieldset {
-    align-items: baseline;
+    /* align-items: baseline; */
     background-color: white;
     opacity: 100;
     border: none;
@@ -56,6 +64,21 @@ fieldset {
     border-radius: 1.25em;
     width: 50%;
     font-family: "Josefin sans";
+}
+
+.wide {
+    width: 100%;
+}
+
+div.gender {
+    background-color: #f5e7ad;
+    border-radius: 1.25em;
+    block-size: auto;
+    width: max-content;
+    padding: 1em;
+    margin: 1em;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .grid {
@@ -70,11 +93,12 @@ fieldset {
 }
 
 input {
-    margin: .5em .5em 1em 1em;
+    /* margin: .5em .5em 1em 1em; */
     padding: 1em;
     background-color: #f5e7ad;
     color: black;
     font-size: 1em;
+    align-items: mid;
     border: none;
     border-radius: 1.25em;
     font-family: "Josefin sans";
@@ -85,20 +109,37 @@ input {
 }
 
 container {
-    align-items: baseline;
+    align-items: flex-end;
+    vertical-align: middle;
     border: none black;
     padding: 2em;
     margin: 1em;
     background-color: white;
     border: none;
 }
+.flex-container {
+    display: flex;
+}
 
+.flex-child {
+    flex: 1;
+    border: none;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
 div.label {
     font-family: "Josefin sans";
     color: black;
     font-size: 1.25em;
+    align-items: center;
+    align-self: auto;
+    align-content: space-around;
 }
-
+/* .prewrap { */
+    white-space: pre-wrap;
+}
 .error {
     font-style: italic;
     color: red;
@@ -124,7 +165,7 @@ img.intLink {
     max-height: 500px;
     border: 1px #000000 solid;
     padding: 12px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #textBox div {

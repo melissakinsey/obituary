@@ -15,31 +15,43 @@
 
     <body onload="initDoc();">
         <h1>Online Obituary Template</h1>
-        <div>
-            <fieldset>
+        <form>
+            <fieldset class="wide">
                 <legend>general</legend>
-                <input type="radio" name="gender" value="male" />
-                <label>male</label>
-                <input type="radio" name="gender" value="female" />
-                <label>female</label>
-                <br>
-                <label>First and last name:</label>
-                <input type="text" name="firstLastName" placeholder="Jane Doe" />
-                <br>
-                <label>Age:</label>
-                <input type="number" name="age" placeholder="70" />
-                <br>
-                <label>Date of death:</label>
-                <input type="date" name="DOD" />
+                <div class= "gender">
+                    <input type="radio" name="gender" value="male"/>
+                    <label>male</label>
+                    <input type="radio" name="gender" value="female"/>
+                    <label>female</label>
+                    <input type="radio" name="gender" value="nonbinary"/>
+                    <label>nonbinary</label>
+                </div>
+                <div>
+                    <label>First and last name:</label>
+                    <input type="text" name="firstLastName" placeholder="Jane Doe"/>
+                </div>
+                <div>
+                    <label>Age:</label>
+                    <input type="number" name="age" placeholder="70"/>
+                </div>
+                <div
+                    <label>Date of death:</label>
+                    <input type="date" name="DOD"/>
+                </div>
             </fieldset>
-        </div>
+        </form>    
+        <form>
         <fieldset id="roles" style="display: none">
             <legend>roles</legend>
         </fieldset>
+        </form>
+        <form>
         <fieldset id="hobbies">
             <div class="grid"></div>
             <legend>hobbies</legend>
         </fieldset>
+        </form>
+        <form>
         <fieldset>
             <legend>obituary</legend>
             <input type="hidden" name="myDoc">
@@ -55,8 +67,10 @@
                     <option value="p">Paragraph &lt;p&gt;</option>
                     <option value="pre">Preformatted &lt;pre&gt;</option>
                 </select>
+                </form>
                 <select onchange="formatDoc('fontname',this[this.selectedIndex].value);this.selectedIndex=0;">
                     <option class="heading" selected>- font -</option>
+                    <option>Josefin Sans</option>
                     <option>Arial</option>
                     <option>Arial Black</option>
                     <option>Courier New</option>
