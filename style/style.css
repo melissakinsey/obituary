@@ -38,7 +38,7 @@ form {
     width: 100%;
   }
   
-  label, input {
+  #hobbies label, #hobbies input {
     display: flex; 
     font-size: 24px;
     float: left;
@@ -52,7 +52,7 @@ form {
     background-color: #f5e7ad;
 }
 
-fieldset {
+fieldset,.hints {
     /* align-items: baseline; */
     background-color: white;
     opacity: 100;
@@ -70,17 +70,19 @@ fieldset {
     width: 100%;
 }
 
-div.gender {
+.wide > div> input {
     background-color: #f5e7ad;
     border-radius: 1.25em;
     block-size: auto;
     width: max-content;
-    padding: 1em;
+    /* padding: 1em; */
     margin: 1em;
     align-items: center;
     vertical-align: middle;
 }
-
+.gender{
+    padding: 1em
+}
 .grid {
     display: grid;
     align-items: baseline;
@@ -91,7 +93,27 @@ div.gender {
     column-gap: 20px;
     row-gap: 10px;
 }
+@media screen and (max-width: 1000px) {
+    fieldset{
+        width:100%
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 850px) {
+    .grid {
+        grid-template-columns: 170px 170px 170px 170px;
+    }
+}
 
+@media screen and (max-width: 700px) {
+    .grid {
+        grid-template-columns: 170px 170px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 170px;
+    }
+}
 input {
     /* margin: .5em .5em 1em 1em; */
     padding: 1em;
@@ -119,6 +141,19 @@ container {
 }
 .flex-container {
     display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    width:100%;
+}
+.flex-container>div{
+    width:40%;
+    min-width:200px;
+}
+.flex-container>div>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .flex-child {
@@ -138,8 +173,8 @@ div.label {
     align-content: space-around;
 }
 /* .prewrap { */
-    white-space: pre-wrap;
-}
+    /* white-space: pre-wrap; */
+/* } */
 .error {
     font-style: italic;
     color: red;
@@ -182,6 +217,30 @@ img.intLink {
 #editMode label {
     cursor: pointer;
 }
+
+.hints {
+    opacity: 0.8;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    animation: blinking 5s ease-in-out 1 reverse;
+}
+@keyframes blinking{
+    0%{
+        opacity: 0.8;
+        transform:scale(1);
+        right: -0;
+        background-color: white;
+    }
+    100%{
+        opacity:0.3;
+        transform:scale(1.2);
+        right: -300px;
+        background-color: rgb(223, 245, 253);
+    }
+}
+
 .d-none {
     display: none !important; 
 }

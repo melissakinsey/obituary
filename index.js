@@ -53,8 +53,9 @@ let memory = {
         male: ['husband', 'brother', 'father', 'friend', 'uncle', 'grandfother', 'son'],
         female: ['wife', 'sister', 'mother', 'friend', 'aunt', 'grandmother', 'daughter']
     },
-    hobbies: ['antiquing', 'astronomy', 'baking', 'beekeeping', 'birdwatching', 'blogging', 'camping', 'cooking', 'sewing', 'quilting', 'needlework', 'knitting', 'dancing', 'dining out', 'entertaining', 'gardening', 'genealogy', 'hiking', 'running', 'decorating', 'investing', 'meditation', 'painting', 'photography', 'pottery', 'rapping', 'reading', 'scrapbooking', 'singing', 'spelunking', 'storytelling', 'woodworking']
-};
+    hobbies: ['antiquing', 'astronomy', 'baking', 'beekeeping', 'birdwatching', 'blogging', 'camping', 'cooking', 'sewing', 'quilting', 'needlework', 'knitting', 'dancing', 'dining out', 'entertaining', 'gardening', 'genealogy', 'hiking', 'running', 'decorating', 'investing', 'meditation', 'painting', 'photography', 'pottery', 'rapping', 'reading', 'scrapbooking', 'singing', 'spelunking', 'storytelling', 'woodworking'],
+    advice: ['Did your loved one have any distinctive physical characteristics, such as hair color or height? If so, add that detail here.', 'What did your loved one keep in his/her/their pockets?', 'advice 1','advice 2']
+}; 
 if (typeof window !== "undefined")
 {
     // browser code
@@ -89,6 +90,10 @@ function checkedHandler(e)
     if (checked)
     {
         inputs[name].push(value)
+        if (value == "reading")
+        {
+        adviceRender ("What kinds of books did your loved one enjoy? What was their favorite book? Add those details here.")
+    }
     } else
     {
         let index = inputs[name].indexOf(value)
@@ -125,7 +130,7 @@ function generateObituary(name, value)
                 return
             }
         }
-       // debugger
+        // debugger
         select.classList.remove("d-none")
         select.innerHTML = ''
         memory[key].forEach((example) =>
@@ -170,10 +175,10 @@ document.querySelectorAll("input:not([type='checkbox']").forEach((input) =>
     function eventHandler(e)
     {
         let { name, value, type } = e.target;
-       
-            inputs[name] = value;
-        
-        
+
+        inputs[name] = value;
+
+
         if (name == 'DOD')
         {
             if (new Date(value).getTime() > new Date().getTime())
@@ -219,7 +224,7 @@ document.querySelectorAll("input:not([type='checkbox']").forEach((input) =>
         generateObituary(name, value)
         //todo understand why it switch all not specific one
     }
-   // input.addEventListener('change', eventHandler);
+    // input.addEventListener('change', eventHandler);
     input.addEventListener('input', eventHandler);
 });
 
@@ -268,4 +273,22 @@ function listSeparator(array)
     //console.log(array)
     let last = copy.pop()
     return copy.join(', ') + (copy.length > 1 ? ',' : '') + (copy.length ? ' and ' : ' ') + last
+}
+// immediately indicated function expression
+(
+    function ()
+    {
+        let randomAdvice = Math.floor(Math.random() * memory.advice.length)
+        adviceRender(memory.advice[randomAdvice])
+    }
+)()
+
+
+function adviceRender(advice)
+{
+    let btn = document.createElement("button")
+    btn.innerText="Apply"
+    let hints = document.querySelector(".hints")
+    hints.innerHTML = advice
+    hints.append(btn)
 }

@@ -18,25 +18,32 @@
         <form>
             <fieldset class="wide">
                 <legend>general</legend>
-                <div class= "gender">
-                    <input type="radio" name="gender" value="male"/>
-                    <label>male</label>
-                    <input type="radio" name="gender" value="female"/>
-                    <label>female</label>
-                    <input type="radio" name="gender" value="nonbinary"/>
-                    <label>nonbinary</label>
-                </div>
-                <div>
-                    <label>First and last name:</label>
-                    <input type="text" name="firstLastName" placeholder="Jane Doe"/>
-                </div>
-                <div>
-                    <label>Age:</label>
-                    <input type="number" name="age" placeholder="70"/>
-                </div>
-                <div
-                    <label>Date of death:</label>
-                    <input type="date" name="DOD"/>
+                <div class="flex-container">
+                    <div>
+                        <label>Gender</label>
+                        <div class= "gender">
+                            <input type="radio" name="gender" value="male"/>
+                            <label>male</label>
+                            <input type="radio" name="gender" value="female"/>
+                            <label>female</label>
+                            <input type="radio" name="gender" value="nonbinary"/>
+                            <label>nonbinary</label>
+                        </div>
+                        <div>
+                            <label>First and last name:</label>
+                            <input type="text" name="firstLastName" placeholder="Jane Doe"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label>Age:</label>
+                            <input type="number" name="age" placeholder="70"/>
+                        </div>
+                        <div>
+                            <label>Date of death:</label>
+                            <input type="date" name="DOD"/>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
         </form>    
@@ -161,6 +168,10 @@
         <form name="compForm">
             <input name="switchMode" value="ok" />
         </form>
+<div class="hints">
+<!-- Did your loved one have any distinctive physical characteristics, such as hair color or height? If so, add that detail here. -->
+</div>
+
     </body>
 
 </html>
